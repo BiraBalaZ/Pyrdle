@@ -1,18 +1,15 @@
 from time import sleep
-from os import system
+from os import system, name
 from random import randrange
-system('cls')
 
-wordList = ['abaco', 'acaro', 'achar', 'adobe', 'aereo', 'agora', 'album', 'algum', 'altar', 'amado', 'andar', 
-'antes', 'aquilo', 'ardor', 'aroma', 'artes', 'asilo', 'astro', 'atomo', 'aviao', 'aviso', 'bacia', 
-'banco', 'beber', 'beijo', 'bicho', 'bordo', 'caber', 'caixa', 'canal', 'carro', 'casal', 'casar', 
-'ciclo', 'claro', 'clave', 'coisa', 'comer', 'copia', 'corpo', 'corte', 'curar', 'danca', 'dedos', 
-'dessa', 'dever', 'doido', 'dueto', 'ecoar', 'efeito', 'elite', 'enfim', 'falta', 'fases', 'feliz', 
-'festa', 'folha', 'frase', 'freio', 'fruta', 'gente', 'grupo', 'homem', 'idoso', 'inicio', 'lento', 
-'letra', 'livro', 'lugar', 'magma', 'marco', 'marte', 'medir', 'menos', 'metas', 'moeda', 'mundo', 
-'musica', 'nariz', 'nobre', 'obras', 'onde', 'onibus', 'pausa', 'pedra', 'poder', 'presa', 'quase', 
-'roupa', 'salvo', 'servo', 'sobre', 'terra', 'tocar', 'unica', 'vapor', 'verao', 'verde'
-]
+def clearTerminal():
+    # Verifica o sistema operacional
+    if name == 'nt':  # Windows
+        system('cls')
+    else:  # Linux e Mac
+        system('clear')
+
+wordList = ["abalo", "abano", "abare", "abeto", "abono", "adaga", "adega", "adiar", "adubo", "afeto", "agudo", "aguia", "alado", "algas", "aliar", "alpes", "altos", "amada", "ameno", "amplo", "aneis", "anexo", "animo", "anjos", "antes", "apelo", "avido", "aviso", "axila", "balao", "barco", "basco", "bicho", "boato", "bossa", "brejo", "brisa", "broto", "burro", "busca", "cabra", "cacto", "calmo", "campo", "carpa", "carte", "cerva", "chato", "choro", "claro", "clero", "cobra", "colar", "comer", "coroa", "creme", "curva", "danos", "dardo", "dedao", "denso", "deste", "dizei", "dorso", "drama", "ebano", "ecoar", "edite", "elmos", "epico", "ervas", "estar", "etico", "exato", "exijo", "exodo", "facil", "falta", "fardo", "fauna", "fibra", "folha", "forca", "forte", "fossa", "fraco", "frevo", "fundo", "gaita", "garra", "gemeo", "girar", "globo", "gotas", "graca", "grama", "guias", "havia", "heroi", "hinos", "horas", "humor", "idear", "igual", "indio", "inerte", "iscas", "jaleco", "jambe", "janta", "jarro", "jazer", "justo", "lamas", "lasso", "latim", "lapis", "laudo", "legal", "letal", "livro", "lombo", "longe", "lotes", "luvas", "macho", "magna", "manga", "massa", "meios", "mente", "menos", "milho", "mocho", "monte", "moral", "musgo", "navio", "neves", "nexus", "noite", "norma", "norte", "novas", "nuvem", "obrar", "oferta", "ogiva", "ondas", "opaco", "ordem", "otimo", "ouros", "ovulo", "pampa", "papel", "parco", "parte", "pedra", "piano", "piloto", "pinho", "pisco", "planos", "praia", "prato", "pulso", "punho", "quais", "quase", "quico", "rabos", "racao", "radio", "rapaz", "rapto", "rebol", "redor", "regua", "relva", "rente", "repor", "rimas", "ritmo", "rocha", "rodas", "rosca", "rotas", "safra", "saias", "salas", "salto", "samba", "sanha", "sapo", "segue", "selar", "senso", "servo", "sinais", "sinal", "sino", "solta", "suave", "super", "surto", "tacas", "tango", "tatua", "tebas", "temer", "tenaz", "tenor", "terra", "teses", "tigre", "toldo", "torpe", "torta", "traco", "trama", "trapo", "trigo", "troca", "truta", "turma", "urubu", "vacas", "vagal", "varas", "velha", "verbo", "verde", "verve", "vespa", "vigas", "vital", "viver", "volei", "xampu", "xango", "xerox", "xingo", "zinco", "zorra", "zumbi"]
 
 word = wordList[randrange(0, len(wordList))]
 attempts = 6
@@ -53,14 +50,15 @@ while attempts > 0:
     # Winning the game
     if hits == len(word):
         sleep(1)
-        system('cls')
+        clearTerminal()
         print("\n:tada: Congratulations!! :tada:")
         break
 
 # Loosing the game
 if attempts == 0:
+    print()
     sleep(1)
-    system('cls')
+    clearTerminal()
     sleep(1)
     print('Você', end = ' ')
     sleep(1)
