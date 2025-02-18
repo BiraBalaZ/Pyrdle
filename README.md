@@ -1,0 +1,3 @@
+<h1>P Y R D <strong color="green">L</strong> E</h1>
+
+<p>Pyrdle is a game based on Wordle, which is a web-based video game developed in 2021 by Josh Wardle, a programmer who previously also created the social experiments Place and The Button for Reddit. Players try to guess a five-letter word in a maximum of six tries; Feedback, in the form of colored tiles, is given for each guess, telling players which letters are in the correct position and which are in other positions in the answer word. The mechanics are similar to games like Mastermind, although Wordle specifies exactly which letters in each guess are correct. For each day, there is a specific answer word that is the same for everyone. Wordle is a copy of the five-letter round from Lingo (a British game show).</p>
